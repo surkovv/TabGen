@@ -1,0 +1,12 @@
+out/
+catboost_info/
+build/
+dist/
+*.egg-info/
+src/tabgen.egg-info/
+
+__pycache__/
+*.py[cod]
+.venv/
+
+.DS_Store

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabgen"
+version = "0.1.0"
+description = "TabGen benchmark generator and Analyze&Act feature-engineering workflow"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "PyYAML",
+    "catboost",
+]
+
+[project.optional-dependencies]
+openai = [
+    "openai",
+]
+
+[project.scripts]
+tabgen-analyze-act = "tabgen.analyze_act.run_single:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
